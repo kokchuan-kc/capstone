@@ -1,0 +1,6 @@
+*.mat
+*.asv
+data/*
+rawdata/*
+result/*
+img/*

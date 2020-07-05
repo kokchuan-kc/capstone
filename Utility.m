@@ -1,10 +1,7 @@
 classdef Utility
     methods(Static)
-        function fitness = calculateFitness(position, goal)
-            fitness = Utility.calculateDistance(position,goal);
-        end
         function bestPosition = selectBestPos(position1, position2, goal)
-            if Utility.calculateFitness(position1, goal) > Utility.calculateFitness(position2, goal)
+            if Utility.calculateDistance(position1, goal) > Utility.calculateDistance(position2, goal)
                 bestPosition = position2;
             else
                 bestPosition = position1;
@@ -17,15 +14,21 @@ classdef Utility
         function value = randRange(min, max)
             value = rand() * abs(max - min);
         end
-        function force = evaluateForce(currentForce, newForce, callback)
-            if currentForce ~= 0
-               force = callback(currentForce, newForce);
+        function result = getValueByPrecision(value, precision)
+              val = value * (10^precision);
+              result = fix(val)/ (10^precision);
+        end
+        function vector = randomVector()
+            if rand() <= 0.5
+                vector = 1;
             else
-                force = currentForce;
+                vector = -1;
             end
         end
-        function result = getValueByPrecision(value, precision)
-            result = round(value,precision) - round((round(value,precision) - value),precision);
+        function deleteAllData
+            delete 'rawdata/*'
+            delete 'data/*'
+            delete 'result/*'
         end
     end
 end
