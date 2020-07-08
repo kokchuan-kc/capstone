@@ -10,7 +10,9 @@ Simulation environment for routing algorithm for swarm in 3D environment using M
 
 #### 1. Visual Simulation
 ![alt text](https://github.com/kokchuan-kc/capstone/blob/master/img/simulation.gif)
+
 ![alt text](https://github.com/kokchuan-kc/capstone/blob/master/img/simulation.PNG)
+
 ![alt text](https://github.com/kokchuan-kc/capstone/blob/master/img/flightpath.png)
 
 #### 2. Batch Simulation
