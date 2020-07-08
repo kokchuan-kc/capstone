@@ -21,6 +21,9 @@ for i = 1:length(algoList)
         simulations(j) = simulation
     end
     
+    if ~exist('rawdata','dir')
+        mkdir rawdata
+    end
     filename = strcat(algo, '-', string(datetime('now','Format','ddHHmmss')));
     path = strcat('rawdata/',filename,'.mat');
     save(path, 'simulations')

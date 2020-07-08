@@ -1,12 +1,11 @@
 clear
 
-
 algoList = ["PSO","NPSO","FFPSOGRAV"];
 algo = algoList(2);
 
 disp(strcat("Running Simulation for ", algo))
 
-for i = 1:2
+for i = 1:1
     close all
     
     tic

@@ -75,6 +75,10 @@ classdef Analysis
                 data.iteration(i) = simulations(i).iteration; 
             end
             
+            if ~exist('data','dir')
+                mkdir data
+            end
+            
             path = strcat('data/', filename, '.mat');
             save(path, '-struct', 'data');
         end
@@ -96,6 +100,10 @@ classdef Analysis
             
             disp(struct2table(results))
             if toSave
+                if ~exist('result','dir')
+                    mkdir result
+                end
+                
                 analysedData = struct('results',results,'filenames',filenames);
                 path = strcat('result/', string(datetime('now','Format','ddHHmmss')), '.mat');
                 save(path, 'analysedData');
