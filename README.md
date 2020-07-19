@@ -1,6 +1,6 @@
 # Capstone Project
 
-Simulation environment for routing algorithm for swarm in 3D environment using MATLAB.
+Simulation environment for optimization of routing algorithm for swarm in 3D environment using MATLAB.
 
 ## Prerequisite
 - [Parallel Computing Toolbox](https://www.mathworks.com/products/parallel-computing.html)
